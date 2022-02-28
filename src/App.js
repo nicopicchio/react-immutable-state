@@ -24,10 +24,9 @@ function App() {
 	};
 
 	const replaceWorkout = (targetWorkout) => {
-		const newlyGeneratedWorkout = generateWorkout()
 		setWorkouts(workouts.map((workout) => {
 			if (workout === targetWorkout) {
-				return newlyGeneratedWorkout
+				return generateWorkout()
 			} else return workout
 		}));
 	};
